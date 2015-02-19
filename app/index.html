@@ -8,41 +8,88 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> -->
-    <link rel="stylesheet" href="bower_components/bootstrap/bootswatch/bootswatch.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="vendor/bootswatch/stylesheet/bootswatch.min.css" />
   </head>
   <body ng-app="musicurieApp">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="text" class="form-control">
-              <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Search</button>
-              </span>
-            </div>
+      <div id="site-wrapper">
+          <div id="site-canvas">
+              <div id="site-menu"> <!--off canvas-->
+                <nav class="navbar navbar-inverse " role="navigation">
+                    <a class="navbar-brand" href="#">Music Curie?</a>
+                </nav>
+                <p>뮤직큐리는 딥링크를 이용한 음악 검색엔진입니다. 원하시는 음악을 제목, 가수, 가사 등을 이용해서 검색하신 후 설치된 앱 중에서 하나를 골라서 재생해주세요.</p>
+                <ul>
+                    <li>네이버뮤직</li>
+                    <li>벅스</li>
+                    <li>멜론</li>
+                    <li>비트</li>
+                    <li>유튜브</li>
+                    <li>사운드클라우드(웹)</li>
+                </ul>
+                <p class="copyright">Copyright © Team Tehran Slippers 2015</p>
+              </div> <!--end off canvas-->
+
+              <div class="container-fluid">
+                  <!--검색버튼 눌렀을 때 변경 될 navbar mock-up.. 잠시 유지 부탁-->
+                  <!--<div class="row"> &lt;!&ndash;nav bar&ndash;&gt;-->
+                      <!--<div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>-->
+                      <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
+                          <!--<div class="navbar navbar-inverse">-->
+                              <!--<div class="navbar-header curie-navbar-header">-->
+                                  <!--<a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>-->
+                                      <!--<i class="glyphicon glyphicon-align-justify"></i>-->
+                                  <!--</a>-->
+
+                                  <!--<span data-view-toggle-navbar-content>-->
+                                    <!--<input type="text" class="form-control curie-navbar-search-inputbox" placeholder="제목, 가수로 검색해보세요.">-->
+                                  <!--</span>-->
+                              <!--</div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>-->
+                  <!--</div> &lt;!&ndash;end nav bar&ndash;&gt;-->
+
+                  <div class="row"> <!--nav bar-->
+                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <div class="navbar navbar-inverse">
+                              <div class="navbar-header curie-navbar-header">
+                                  <a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>
+                                      <i class="glyphicon glyphicon-align-justify"></i>
+                                  </a>
+                                  <span data-view-toggle-navbar-content="brand">
+                                      <a class="navbar-brand">Musicurie</a>
+                                  </span>
+                                  <a class="toggle-nav curie-navbar-search" data-event-toggle-searchbox>
+                                      <i class="glyphicon glyphicon-search"></i>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                  </div> <!--end nav bar-->
+
+                  <div class="row" data-view-main-content> <!--main content-->
+                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <div ng-view=""></div>
+                      </div>
+                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                  </div> <!--main content end-->
+
+                  <div class="row"> <!--footer-->
+                  </div> <!--end footer -->
+              </div> <!-- end container--fluid -->
           </div>
-        </div>
-        <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
       </div>
-      <div class="row">
-        <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div ng-view=""></div>
-        </div>
-        <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-      </div>
-      <div class="row">
-      </div>
-    </div>
+
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
     ! function(A, n, g, u, l, a, r) {
@@ -69,6 +116,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/common.js"></script>
     <!-- endbuild -->
   </body>
 </html>
