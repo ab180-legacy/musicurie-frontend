@@ -136,10 +136,25 @@ body {
 
 .curie-navbar-header {
   width: 100% !important;
+  font-size: 0;
+  vertical-align: top;
+  & > .curie-navbar-header-left {
+    display: inline-block;
+    width: 15%;
+  }
+  & > .curie-navbar-header-right {
+    display: inline-block;
+    width:85%;
+    font-size: 14px;
+    & > a.navbar-brand {
+      padding: 15px 0;
+    }
+  }
 }
 
 .curie-navbar-toggle {
   float: left;
+  font-size: 14px;
 
   text-decoration: none;
   line-height: 20px;
@@ -150,6 +165,10 @@ body {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 20px;
+
+  & > i {
+    font-size: 14px;
+  }
 }
 
 .curie-navbar-search {
@@ -168,7 +187,7 @@ body {
 
 .curie-navbar-search-inputbox {
   float: right;
-  width: 92% !important;
+  // width: 92% !important;
   margin: 5px 5px;
   padding: 15px 15px;
   font-size: 18px;

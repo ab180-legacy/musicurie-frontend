@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -15,11 +16,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="vendor/bootswatch/stylesheet/bootswatch.min.css" />
-  </head>
-  <body ng-app="musicurieApp">
-      <div id="site-wrapper">
-          <div id="site-canvas">
-              <div id="site-menu"> <!--off canvas-->
+</head>
+
+<body ng-app="musicurieApp">
+    <div id="site-wrapper">
+        <div id="site-canvas">
+            <div id="site-menu">
+                <!--off canvas-->
                 <nav class="navbar navbar-inverse " role="navigation">
                     <a class="navbar-brand" href="#">Music Curie?</a>
                 </nav>
@@ -33,70 +36,76 @@
                     <li>사운드클라우드(웹)</li>
                 </ul>
                 <p class="copyright">Copyright © Team Tehran Slippers 2015</p>
-              </div> <!--end off canvas-->
+            </div>
+            <!--end off canvas-->
 
-              <div class="container-fluid">
-                  <!--검색버튼 눌렀을 때 변경 될 navbar mock-up.. 잠시 유지 부탁-->
-                  <!--<div class="row"> &lt;!&ndash;nav bar&ndash;&gt;-->
-                      <!--<div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>-->
-                      <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
-                          <!--<div class="navbar navbar-inverse">-->
-                              <!--<div class="navbar-header curie-navbar-header">-->
-                                  <!--<a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>-->
-                                      <!--<i class="glyphicon glyphicon-align-justify"></i>-->
-                                  <!--</a>-->
+            <div class="container-fluid">
+                <!-- 검색버튼 눌렀을 때 변경 될 navbar mock-up.. 잠시 유지 부탁 -->
+                <div class="row">
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="navbar navbar-inverse">
+                            <div class="navbar-header curie-navbar-header">
+                                <div class="curie-navbar-header-left">
+                                    <a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>
+                                        <i class="glyphicon glyphicon-align-justify"></i>
+                                    </a>
+                                </div>
+                                <div class="curie-navbar-header-right" data-view-toggle-navbar-content="brand">
+                                    <a class="navbar-brand">Musicurie</a>
+                                    <a class="toggle-nav curie-navbar-search" data-event-toggle-searchbox>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                </div>
 
-                                  <!--<span data-view-toggle-navbar-content>-->
-                                    <!--<input type="text" class="form-control curie-navbar-search-inputbox" placeholder="제목, 가수로 검색해보세요.">-->
-                                  <!--</span>-->
-                              <!--</div>-->
-                          <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>-->
-                  <!--</div> &lt;!&ndash;end nav bar&ndash;&gt;-->
+                <!-- <div class="row">
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="navbar navbar-inverse">
+                            <div class="navbar-header curie-navbar-header">
+                                <a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>
+                                    <i class="glyphicon glyphicon-align-justify"></i>
+                                </a>
 
-                  <div class="row"> <!--nav bar-->
-                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <div class="navbar navbar-inverse">
-                              <div class="navbar-header curie-navbar-header">
-                                  <a class="toggle-nav curie-navbar-toggle" data-event-toggle-offcanvas>
-                                      <i class="glyphicon glyphicon-align-justify"></i>
-                                  </a>
-                                  <span data-view-toggle-navbar-content="brand">
-                                      <a class="navbar-brand">Musicurie</a>
-                                  </span>
-                                  <a class="toggle-nav curie-navbar-search" data-event-toggle-searchbox>
-                                      <i class="glyphicon glyphicon-search"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-                  </div> <!--end nav bar-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                </div> -->
+                <!--end nav bar-->
 
-                  <div class="row" data-view-main-content> <!--main content-->
-                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <div ng-view=""></div>
-                      </div>
-                      <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
-                  </div> <!--main content end-->
+                <div class="row" data-view-main-content>
+                    <!--main content-->
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div ng-view=""></div>
+                    </div>
+                    <div class="xs-hidden col-sm-3 col-md-3 col-lg-3"></div>
+                </div>
+                <!--main content end-->
 
-                  <div class="row"> <!--footer-->
-                  </div> <!--end footer -->
-              </div> <!-- end container--fluid -->
-          </div>
-      </div>
+                <div class="row">
+                    <!--footer-->
+                </div>
+                <!--end footer -->
+            </div>
+            <!-- end container--fluid -->
+        </div>
+    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
     ! function(A, n, g, u, l, a, r) {
-    A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
-    (A[l].q = A[l].q || []).push(arguments)
-    }, A[l].l = +new Date, a = n.createElement(g),
-    r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
     }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
@@ -118,5 +127,6 @@
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/common.js"></script>
     <!-- endbuild -->
-  </body>
+</body>
+
 </html>
