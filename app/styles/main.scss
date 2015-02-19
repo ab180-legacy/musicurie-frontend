@@ -87,3 +87,100 @@ body {
     border-bottom: 0;
   }
 }
+
+.main-content-item {
+  margin-bottom: 10px !important;
+}
+
+
+//off canvas
+
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  height: 800px; /* Temp: Simulates a tall page. */
+}
+
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+
+  /*padding: 3.5% 0; *//* Temp: Just spacing. */
+}
+
+#site-menu {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background: #ddd;
+  padding: 15px;
+}
+
+#site-wrapper.show-nav #site-canvas {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+.curie-navbar {
+  background-color: #424242 !important;
+}
+
+.curie-navbar-header {
+  width: 100% !important;
+}
+
+.curie-navbar-toggle {
+  float: left;
+
+  text-decoration: none;
+  line-height: 20px;
+  position: relative;
+
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 20px;
+}
+
+.curie-navbar-search {
+  float: right;
+
+  text-decoration: none;
+  line-height: 20px;
+  position: relative;
+
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-end: 20px;
+}
+
+.curie-navbar-search-inputbox {
+  float: right;
+  width: 92% !important;
+  margin: 5px 5px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+
+
+.dim-effect {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
